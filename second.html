@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>JS Bin</title>
+    <style>
+      .focused {
+        outline: none;
+        border: solid 2px red;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="formElement">
+      One: <input type="text" /><br />
+      Two: <input type="text" />
+    </form>
+    <script>
+      let formElement = document.forms["formElement"];
+      for (const input of formElement) {
+        input.addEventListener("focus", () => {
+          input.classList.add("focused");
+        });
+        input.addEventListener("blur", () => {
+          input.classList.remove("focused");
+        });
+      }
+    </script>
+  </body>
+</html>
