@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Быки и коровы</title>
+    <style>
+      .instuction {
+        display: flex;
+      }
+      .instuction__images {
+        padding-top: 40px;
+      }
+      .instuction__text {
+        width: 380px;
+        line-height: 1.5;
+      }
+      [type="text"]:focus {
+        outline: none;
+        border: 2px solid #006dcc;
+      }
+      .form__button {
+        background-color: #006dcc;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Быки и коровы</h1>
+    </header>
+    <main>
+      <div class="instuction">
+        <div class="instuction__images">
+          <img src="/img/bullsandcows.png" alt="Bulls and cows" />
+        </div>
+        <div class="instuction__text">
+          <p>
+            <strong>Правила игры</strong> <br />
+            Компьютер задумывает шесть различных цифр из 0,1,2,...9. Игрок
+            делает ходы, чтобы узнать эти цифры и их порядок. <br />
+            Каждый ход состоит от 3 до 6 цифр, 0 может стоять на первом месте.
+            <br />
+            В ответ компьютер показывает число отгаданных цифр, стоящих на своих
+            местах (число быков) и число отгаданных цифр, стоящих не на своих
+            местах (число коров). <br /><strong>Пример</strong><br />
+            Компьютер задумал 083457. <br />
+            Игрок сделал ход 813457. <br />
+            Компьютер ответил: 4 быка (цифры 3, 4, 5, 7) и 1 корова (цифра 8).
+          </p>
+        </div>
+      </div>
+
+      <form>
+        <strong>Компьютер уже что-то задумал. Играем! </strong> <br />
+        Найди число, задуманное компьютером! <br />
+        <div class="counter">
+          <div class="text__counter"></div>
+        </div>
+        <input type="text" id="user" />
+        <input
+          class="form__button"
+          type="button"
+          value="Cделать ход"
+          onclick="iGuessTheNumber()"
+        />
+      </form>
+
+      <div class="text">
+        <div class="text__list"></div>
+      </div>
+    </main>
+
+    <script src="third.js"></script>
+  </body>
+</html>
